@@ -4,4 +4,11 @@
 *.aux
 *.out
 *.tdo
+*.toc
+
+*.bbl
+*.blg
+
+.#*
+*.swp
 auto/
