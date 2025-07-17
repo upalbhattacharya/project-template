@@ -76,8 +76,13 @@
 
 \usepackage{todonotes}
 
+% Counter
+\newcounter{todocounter}
+\newcommand{\todonum}[2][]
+{\stepcounter{todocounter}\todo[#1]{\thetodocounter: #2}}
+
 % \todostyle{red}{color=cat-latte-red!30}
-\todostyle{red}{color=red}
+% \todostyle{red}{color=red}
 % \todostyle{red}{color=red,shadow}
 % \todostyle{green}{color=cat-latte-green!30,shadow}
 % \todostyle{blue}{color=cat-latte-blue!30,shadow}
