@@ -3,3 +3,5 @@
 *.pdf
 *.aux
 *.out
+*.tdo
+auto/
