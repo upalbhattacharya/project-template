@@ -1,0 +1,45 @@
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lineno}
+\usepackage{graphicx}
+\usepackage{longtable}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\usepackage{hyperref}
+
+\usepackage[normalem]{ulem}
+\usepackage{tcolorbox}
+
+\usepackage[dvipsnames]{xcolor}
+
+% Colors : from Catppuccin Latte
+\definecolor{cat-latte-green}{HTML}{40A02B}
+\definecolor{cat-latte-orange}{HTML}{FE640B}
+\definecolor{cat-latte-yellow}{HTML}{DF8E1D}
+\definecolor{cat-latte-red}{HTML}{D20F39}
+\definecolor{cat-latte-blue}{HTML}{04A5E5}
+\definecolor{cat-latte-gray}{HTML}{7c7f93}
+
+\tcbuselibrary{theorems}
+
+% Callouts
+\newtcbtheorem[auto counter]{caution}{Caution}%
+{colback=cat-latte-orange!15,colframe=cat-latte-orange,fonttitle=\bfseries}{caution}
+
+\newtcbtheorem[auto counter]{positive}{Positive}%
+{colback=cat-latte-green!15,colframe=cat-latte-green,fonttitle=\bfseries}{positive}
+
+\newtcbtheorem[auto counter]{query}{Query}%
+{colback=cat-latte-yellow!15,colframe=cat-latte-yellow,fonttitle=\bfseries}{query}
+
+\newtcbtheorem[auto counter]{answer}{Answer}%
+{colback=cat-latte-blue!15,colframe=cat-latte-blue,fonttitle=\bfseries}{answer}
+
+\newtcbtheorem[auto counter]{negative}{Negative}%
+{colback=cat-latte-red!15,colframe=cat-latte-red,fonttitle=\bfseries}{negative}
+
+\newtcbtheorem[auto counter]{gap}{Gap}%
+{colback=cat-latte-gray!15,colframe=cat-latte-gray,fonttitle=\bfseries}{gap}
