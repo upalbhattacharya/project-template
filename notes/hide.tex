@@ -1,13 +1,2 @@
-\usepackage{comment}
-\newif\ifshow
-\ifshow
-  \newenvironment{hlred}{}{}
-\else
-  \excludecomment{hlred}
-\fi
-
-\ifshow
-  \newenvironment{caution}{}{}
-\else
-  \excludecomment{caution}
-\fi
+\usepackage{etoolbox}
+\csundef{hlred}
