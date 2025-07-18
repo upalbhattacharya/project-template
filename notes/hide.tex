@@ -1,9 +1,28 @@
+\usepackage{environ}
+
 \newif\ifhide
-\hidetrue
+\hidetrue % toggle if necessary
 
 \ifhide
-\usepackage{environ}
-\NewEnviron{hide}{}
-\let\caution\hide
-\let\endcaution\endhide
+  \NewEnviron{hide}{}
+  \let\caution\hide
+  \let\endcaution\endhide
+  
+  \let\positive\hide
+  \let\endpositive\endhide
+  
+  \let\negative\hide
+  \let\endnegative\endhide
+  
+  \let\gap\hide
+  \let\endgap\endhide
+  
+  \let\upal\hide
+  \let\endupal\endhide
+  
+  \let\query\hide
+  \let\endquery\endhide
+  
+  \let\answer\hide
+  \let\endanswer\endhide
 \fi
