@@ -2,37 +2,54 @@
 % Package Loading
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Basic
+%%%%%%%%%% Basic %%%%%%%%%%
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[displaymath,mathlines,running]{lineno}
 
-% Referencing
+%%%%%%%%%% Referencing %%%%%%%%%%
 \usepackage[numbers,sort&compress]{natbib}
 
-% Images
+%%%%%%%%%% Images %%%%%%%%%%
 \usepackage{graphicx}
 \usepackage{subcaption}      % For subfigures
 
-% Formatting
+%%%%%%%%%% Formatting %%%%%%%%%%
 \usepackage{longtable}
 \usepackage[hidelinks]{hyperref}
 \hypersetup{
   colorlinks = true,
   linkcolor = cat-latte-red}
 
-% Math
+%%%%%%%%%% Math %%%%%%%%%%
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
 
-% Presentation
+%%%%%%%%%% Presentation %%%%%%%%%%
 \usepackage[dvipsnames]{xcolor}
 \usepackage[normalem]{ulem}
 \usepackage{tcolorbox}
 \usepackage{soul}
 
-% Colors : from Catppuccin Latte
+
+%%%%%%%%%% Misc %%%%%%%%%%
+\usepackage{todonotes}
+
+\newcounter{todocounter}
+\newcommand{\todonum}[2][]
+{\stepcounter{todocounter}\todo[#1]{\thetodocounter: #2}}
+
+\usepackage[commandnameprefix=always]{changes}
+\definechangesauthor[name='Upal Bhattacharya', color=cat-latte-purple]{UB}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Customization
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tcbuselibrary{theorems}
+
+%%%%%%%%%% Colors (Catppuccin Latte) %%%%%%%%%%
 \definecolor{cat-latte-green}{HTML}{40A02B}
 \definecolor{cat-latte-orange}{HTML}{FE640B}
 \definecolor{cat-latte-yellow}{HTML}{DF8E1D}
@@ -41,35 +58,6 @@
 \definecolor{cat-latte-gray}{HTML}{7c7f93}
 \definecolor{cat-latte-purple}{HTML}{8839EF}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Customization
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\tcbuselibrary{theorems}
-
-% Callouts
-\newtcbtheorem[auto counter]{caution}{Caution}%
-{colback=cat-latte-orange!15,colframe=cat-latte-orange,fonttitle=\bfseries}{caution}
-
-\newtcbtheorem[auto counter]{positive}{Positive}%
-{colback=cat-latte-green!15,colframe=cat-latte-green,fonttitle=\bfseries}{positive}
-
-\newtcbtheorem[auto counter]{query}{Query}%
-{colback=cat-latte-yellow!15,colframe=cat-latte-yellow,fonttitle=\bfseries}{query}
-
-\newtcbtheorem[auto counter]{answer}{Answer}%
-{colback=cat-latte-blue!15,colframe=cat-latte-blue,fonttitle=\bfseries}{answer}
-
-\newtcbtheorem[auto counter]{negative}{Negative}%
-{colback=cat-latte-red!15,colframe=cat-latte-red,fonttitle=\bfseries}{negative}
-
-\newtcbtheorem[auto counter]{gap}{Gap}%
-{colback=cat-latte-gray!15,colframe=cat-latte-gray,fonttitle=\bfseries}{gap}
-
-\newtcbtheorem[no counter]{upal}{Upal}%
-{colback=cat-latte-purple!15,colframe=cat-latte-purple,fonttitle=\bfseries}{upal}
-
-
 \colorlet{soulred}{cat-latte-red!50}
 \colorlet{soulgreen}{cat-latte-green!50}
 \colorlet{soulyellow}{cat-latte-yellow!50}
@@ -77,7 +65,23 @@
 \colorlet{soulblue}{cat-latte-blue!50}
 \colorlet{soulgray}{cat-latte-gray!50}
 
-% Highlight
+%%%%%%%%%% Callouts %%%%%%%%%%
+\newtcbtheorem[auto counter]{caution}{Caution}%
+{colback=cat-latte-orange!15,colframe=cat-latte-orange,fonttitle=\bfseries}{caution}
+\newtcbtheorem[auto counter]{positive}{Positive}%
+{colback=cat-latte-green!15,colframe=cat-latte-green,fonttitle=\bfseries}{positive}
+\newtcbtheorem[auto counter]{query}{Query}%
+{colback=cat-latte-yellow!15,colframe=cat-latte-yellow,fonttitle=\bfseries}{query}
+\newtcbtheorem[auto counter]{answer}{Answer}%
+{colback=cat-latte-blue!15,colframe=cat-latte-blue,fonttitle=\bfseries}{answer}
+\newtcbtheorem[auto counter]{negative}{Negative}%
+{colback=cat-latte-red!15,colframe=cat-latte-red,fonttitle=\bfseries}{negative}
+\newtcbtheorem[auto counter]{gap}{Gap}%
+{colback=cat-latte-gray!15,colframe=cat-latte-gray,fonttitle=\bfseries}{gap}
+\newtcbtheorem[no counter]{upal}{Upal}%
+{colback=cat-latte-purple!15,colframe=cat-latte-purple,fonttitle=\bfseries}{upal}
+
+%%%%%%%%%% Highlights %%%%%%%%%%
 \newcommand{\hlred}[1]{\sethlcolor{soulred}\hl{#1}}
 \newcommand{\hlgreen}[1]{\sethlcolor{soulgreen}\hl{#1}}
 \newcommand{\hlyellow}[1]{\sethlcolor{soulyellow}\hl{#1}}
@@ -85,7 +89,7 @@
 \newcommand{\hlorange}[1]{\sethlcolor{soulorange}\hl{#1}}
 \newcommand{\hlgray}[1]{\sethlcolor{soulgray}\hl{#1}}
 
-% Underline
+%%%%%%%%%% Underline %%%%%%%%%%
 \setul{}{1pt} % Width
 \newcommand{\ulred}[1]{\setulcolor{cat-latte-red}\ul{#1}}
 \newcommand{\ulgreen}[1]{\setulcolor{cat-latte-green}\ul{#1}}
@@ -94,12 +98,3 @@
 \newcommand{\ulorange}[1]{\setulcolor{cat-latte-orange}\ul{#1}}
 \newcommand{\ulgray}[1]{\setulcolor{cat-latte-gray}\ul{#1}}
 
-\usepackage{todonotes}
-
-% Counter
-\newcounter{todocounter}
-\newcommand{\todonum}[2][]
-{\stepcounter{todocounter}\todo[#1]{\thetodocounter: #2}}
-
-\usepackage[commandnameprefix=always]{changes}
-\definechangesauthor[name='Upal Bhattacharya', color=cat-latte-purple]{UB}
