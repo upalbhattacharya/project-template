@@ -1,24 +1,36 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Package Loading
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Basic
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[displaymath,mathlines,running]{lineno}
-\usepackage{subcaption}      % For subfigures
+
+% Referencing
+\usepackage[numbers,sort&compress]{natbib}
+
+% Images
 \usepackage{graphicx}
+\usepackage{subcaption}      % For subfigures
+
+% Formatting
 \usepackage{longtable}
-
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{amsthm}
-
 \usepackage[hidelinks]{hyperref}
 \hypersetup{
   colorlinks = true,
   linkcolor = cat-latte-red}
 
-\usepackage[numbers,sort&compress]{natbib}
+% Math
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
 
-\usepackage[normalem]{ulem}
-
+% Presentation
 \usepackage[dvipsnames]{xcolor}
+\usepackage[normalem]{ulem}
+\usepackage{tcolorbox}
+\usepackage{soul}
 
 % Colors : from Catppuccin Latte
 \definecolor{cat-latte-green}{HTML}{40A02B}
@@ -29,7 +41,10 @@
 \definecolor{cat-latte-gray}{HTML}{7c7f93}
 \definecolor{cat-latte-purple}{HTML}{8839EF}
 
-\usepackage{tcolorbox}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Customization
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \tcbuselibrary{theorems}
 
 % Callouts
@@ -54,7 +69,6 @@
 \newtcbtheorem[no counter]{upal}{Upal}%
 {colback=cat-latte-purple!15,colframe=cat-latte-purple,fonttitle=\bfseries}{upal}
 
-\usepackage{soul}
 
 \colorlet{soulred}{cat-latte-red!50}
 \colorlet{soulgreen}{cat-latte-green!50}
