@@ -1,1 +1,9 @@
-\let\caution\empty
+\newif\ifhide
+%\hidetrue %uncomment to hide proofs
+
+\ifhide
+\usepackage{environ}
+\NewEnviron{hide}{}
+\let\caution\hide
+\let\endcaution\endhide
+\fi
