@@ -14,7 +14,6 @@
 \begingroup
     \hypersetup{linkcolor=black}
     \tableofcontents
-    \listoftodos
     \pagebreak
 \endgroup
 
@@ -29,9 +28,13 @@ Template project for taking notes in \LaTeX.
 \nolinenumbers
 \appendix
 
-\listoftodos
 
-\listofchanges
+\begingroup
+    \hypersetup{linkcolor=black}
+    \listoftodos
+    \listofchanges
+    \pagebreak
+\endgroup
 
 \end{document}
 
