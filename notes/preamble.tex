@@ -43,6 +43,11 @@
 \definechangesauthor[name='Upal Bhattacharya', color=cat-latte-lavendar]{UB}
 
 \usepackage{scontents}
+\newenvironment{embed}%
+{%
+    \refstepcounter{embed}%
+    \textbf{Embed \theembed }\newline%
+}{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Customization
