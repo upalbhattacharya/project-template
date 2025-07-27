@@ -43,8 +43,11 @@
 \definechangesauthor[name='Upal Bhattacharya', color=cat-latte-lavendar]{UB}
 
 \usepackage{scontents}
-\newcounter{embedsrc}
-\newenvironment{embedsrc}[1]{\begin{scontents}[store-env=#1,print-env=true]}{\end{scontents}}
+\newcommand{\getembed}[1]{%
+  \begin{tcolorbox}%
+    \getstored{#1}%
+    \end{tcolorbox}%
+    }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Customization
