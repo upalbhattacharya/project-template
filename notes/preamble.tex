@@ -43,8 +43,8 @@
 \definechangesauthor[name='Upal Bhattacharya', color=cat-latte-lavendar]{UB}
 
 \usepackage{scontents}
-\usecounter{embedcounter}
-% \renewcommand{\theembedcounter}{\arabic{embedcounter}}
+\newcounter{embedcounter}
+\renewcommand{\theembedcounter}{\arabic{embedcounter}}
 
 \newenvironment{embed}[1][]{%
 \refstepcounter{embedcounter}%
