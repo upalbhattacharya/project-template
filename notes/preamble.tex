@@ -46,7 +46,7 @@
 \newcounter{embedcounter}
 \renewcommand{\theembedcounter}{\arabic{embedcounter}}
 
-\newenvironment{embed}[1][]{%
+\newenvironment{embed}[1]{%
 \refstepcounter{embedcounter}%
 \label{#1}%
 \begin{verbatim}}%
