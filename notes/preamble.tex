@@ -43,14 +43,6 @@
 \definechangesauthor[name='Upal Bhattacharya', color=cat-latte-lavendar]{UB}
 
 \usepackage{scontents}
-\newcounter{embedcounter}
-\renewcommand{\theembedcounter}{\arabic{embedcounter}}
-
-\newenvironment{embed}[1]{%
-\refstepcounter{embedcounter}%
-\label{#1}%
-\begin{equation}}%
-{\end{equation}}
 
 \newcommand{\getembed}[1]{%
   \begin{tcolorbox}%
