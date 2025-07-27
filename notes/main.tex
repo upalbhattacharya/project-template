@@ -24,10 +24,11 @@
 Template project for taking notes in \LaTeX.
 
 \begin{scontents}[store-env=embed:test,print-env=true]
+  \label{embed:test}
   This is a test of an embed?
 \end{scontents}
 
-\getstored{embed:test}
+\getstored{embed:test} Checking the reference \ref{embed:test}
 
 %%%%%%%%%% Bibliography %%%%%%%%%%
 \bibliographystyle{splncs04nat}
