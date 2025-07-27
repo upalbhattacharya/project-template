@@ -45,6 +45,7 @@
 \usepackage{scontents}
 % \newenvironment{bembedsrc}[1]{\begin{scontents}[store-env=#1,print-env=true]}%
 %   {\end{scontents}}
+\newcounter{bembed}
 \newenvironment{testembed}[1]{\refstepcounter{bembed}\begin{equation}}{\end{equation}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
