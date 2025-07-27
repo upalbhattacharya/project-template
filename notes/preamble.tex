@@ -44,11 +44,15 @@
 
 \usepackage{scontents}
 \newcounter{embed}
-\newenvironment{embed}%
+\newenvironment{embedsrc}[1]%
 {%
-    \refstepcounter{embed}%
-    \textbf{Embed \theembed }\newline%
-}{}
+    \refstepcounter{embedsrc}%
+    \theembedsrc }\newline%
+    \begin{scontents}[store-env:#1,print-env=true]%
+    }%
+{%
+    \end{scontents}
+    }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Customization
