@@ -43,6 +43,14 @@
 \definechangesauthor[name='Upal Bhattacharya', color=cat-latte-lavendar]{UB}
 
 \usepackage{scontents}
+\usecounter{testembedcounter}
+\renewcommand{\thetestembedcounter}{\arabic{testembedcounter}}
+
+\newenvironment{testembed}[1]{%
+\refstepcounter{testembedcounter}%
+\label{#1}%
+\begin{verbatim}}%
+{\end{verbatim}}
 \newcommand{\getembed}[1]{%
   \begin{tcolorbox}%
     \getstored{#1}%
