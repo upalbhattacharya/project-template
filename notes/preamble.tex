@@ -43,8 +43,9 @@
 \definechangesauthor[name='Upal Bhattacharya', color=cat-latte-lavendar]{UB}
 
 \usepackage{scontents}
-\newenvironment{bembedsrc}[1]{\begin{scontents}[store-env=#1,print-env=true]}%
-{\end{scontents}}
+% \newenvironment{bembedsrc}[1]{\begin{scontents}[store-env=#1,print-env=true]}%
+%   {\end{scontents}}
+\newenvironment{testembed}[1]{\label{#1}\begin{verbatim}}{\end{verbatim}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Customization
